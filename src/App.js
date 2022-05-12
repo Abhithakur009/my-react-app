@@ -10,12 +10,10 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // alert(`The name you entered was: ${name}`);
   }
   const myvalueshow =(event) => {
     setChange(false)
    // event.preventDefault();
-  alert(`The name you entered was: ${changeval}`);
   }
   return (
     <>
