@@ -2,6 +2,10 @@ import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import { useState } from "react";
+import Exerciseone from './Exerciseone';
+import Lowercase from './Lowercase';
+import Uppercase from './Uppercase';
+import ClearText from './ClearText';
 
 function App() {
   const [name, setName] = useState("");
@@ -56,7 +60,9 @@ function App() {
           </div>
          </div>
       </div>
-
+<Lowercase />
+<Uppercase />
+<ClearText />
     </>
   );
 }
