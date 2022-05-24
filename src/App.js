@@ -8,9 +8,7 @@ function App() {
 
     <>
     <FirstComponent  />
-    {/* <Row>
-      <Col sm="6"></Col>
-    </Row> */}
+    
     </>
 
 

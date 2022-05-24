@@ -5,11 +5,11 @@ function FirstComponent() {
     return (
         <>
 
-            <div className="container">
+            <div className="container first-container">
                 <div className="row justify-content-md-center">
                     <div className="col-auto">
                         <label className="visually-hidden">Value Of First Component </label>
-                        <input type="text" className="form-control-plaintext" placeholder="First Components" />
+                        <input type="text" className="form-control" placeholder="First Components" />
                     </div>
                     <div className="col-auto">
                         <label className="visually-hidden">Password</label>
