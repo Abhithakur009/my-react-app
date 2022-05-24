@@ -35,6 +35,7 @@ function ClearText() {
                   </div>
                   <div className="mb-3">
                       <button type="button"
+                        className="btn btn-success"
                           title="Convert Text To Lower Case"
                           onClick={Removespace}
                           color="#606070"

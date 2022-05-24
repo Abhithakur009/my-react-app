@@ -30,6 +30,7 @@ export default function Uppercase() {
                   </div>
                   <div className="mb-3">
                       <button type="button"
+                      className="btn btn-success"
                           title="Convert Text To Lower Case"
                           onClick={convertTextToUpperCase}
                           color="#606070"
@@ -48,6 +49,7 @@ export default function Uppercase() {
                   </div>
                   <div className="mb-3">
                       <button type="button"
+                      className="btn btn-success"
                           title="Convert Text To Lower Case"
                           onClick={convertTextLowercase}
                           color="#606070"

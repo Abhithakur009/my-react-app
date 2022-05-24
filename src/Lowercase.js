@@ -12,12 +12,12 @@ export default function Lowercase() {
     
           <div className="tasks-container">
               <div className="container">
-                  <h1>Clear Text button </h1>
+                  <h1>Clear Input Value On Button Click</h1>
                   <div className="mb-3">
                       <input type="text" value={myval} />
                   </div>
                   <div className="mb-3">
-                      <button onClick={() => setMyVal(() => "")}>Reset</button>
+                      <button className="btn btn-success" onClick={() => setMyVal(() => "")}>Reset</button>
                   </div>
               </div>
           </div>
