@@ -4,35 +4,33 @@ import { useState, useEffect } from 'react';
 
 
 
-function SecondComponent({ changeval, sendvalue }) {
-    const [changevals, setChange] = useState("");
+function SecondComponent(props) {
+    const [changevals, setChange] = useState(props.sendTOChild);
     const [next, setnext] = useState("");
-    console.log(changeval);
-    //console.log(props.FirstCompChange);
+    // console.log(props.sendTOChild);
 
-  
 
-    const secondCompSubmit = (e) => {
-       console.log(changevals);
-        
+    const { sendTOChild } = props;
+    const Values = props.sendTOChild;
+    if (Values != next) {
+        setChange(sendTOChild);
+        setnext(sendTOChild);
+    }
+    //const data = "test data";
+
+    const secondReset = () => {
+        setChange("");
+        props.parentCallback("");
+
     }
 
-    const secondReset = (e) => {
-        e.preventDefault();
-        changevals("");
-
+    function childToPar() {
+        props.parentCallback(changevals);
     }
 
-    useEffect(() => {
-        console.log('chnagen in second option', changevals);
-      
-    }, [changevals]);
 
-    useEffect(() => {
-        setChange(changeval);
-        setnext(changevals)
-        console.log('chnagen in second option', changevals);
-    }, [changeval]);
+
+
     return (
         <>
 
@@ -45,7 +43,7 @@ function SecondComponent({ changeval, sendvalue }) {
                     <input type="text" name="First" value={changevals} className="form-control" onChange={(e) => setChange(e.target.value)} placeholder="First Components" />
                 </div>
                 <div className="col-auto  py-1">
-                    <button type="submit" onClick={(e)=>setnext(changevals)} className="btn btn-primary mb-2">Submit</button>
+                    <button type="submit" onClick={childToPar} className="btn btn-primary mb-2">Submit</button>
                     <button type="submit" onClick={secondReset} className="btn mb-2 ms-2 btn-primary ">Reset</button>
                 </div>
 
